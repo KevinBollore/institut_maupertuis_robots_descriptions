@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="robot_ip" />
+  <arg name="J23_factor" default="1" />
+  <arg name="use_bswap" default="true" />
+
+  <rosparam command="load" file="$(find fanuc_r1000ia_support)/config/joint_names_r1000ia80f.yaml" />
+
+  <include file="$(find fanuc_driver)/launch/robot_state.launch">
+    <arg name="robot_ip"   value="$(arg robot_ip)" />
+    <arg name="J23_factor" value="$(arg J23_factor)" />
+    <arg name="use_bswap"  value="$(arg use_bswap)" />
+  </include>
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" 
+    type="robot_state_publisher" />
+
+  <include file="$(find fanuc_r1000ia_ensenso_n10_grinding_support)/launch/load_r1000ia_grinding.launch" />
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find fanuc_r1000ia_ensenso_n10_grinding_support)/config/robot_state_visualize.rviz" required="true" />
+</launch>

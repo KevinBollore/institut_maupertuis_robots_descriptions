@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+
+<robot name="grinding_workcell" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find grinding_workcell_description)/urdf/grinding_workcell_macro.xacro"/>
+  <xacro:grinding_workcell prefix=""/>
+</robot>

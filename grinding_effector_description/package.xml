@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package>
+  <name>grinding_eef_description</name>
+  <version>0.0.0</version>
+  <description>Grinding end effector description</description>
+  <maintainer email="victor.lamoine@gmail.com">Victor Lamoine</maintainer>
+  <license>BSD</license>
+
+  <url type="website">https://github.com/InstitutMaupertuis/grinding_effector_description/README.md</url>
+  <url type="bugtracker">https://github.com/InstitutMaupertuis/grinding_effector_description/issues</url>
+  <url type="repository">https://github.com/InstitutMaupertuis/grinding_effector_description</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>xacro</run_depend>
+
+</package>

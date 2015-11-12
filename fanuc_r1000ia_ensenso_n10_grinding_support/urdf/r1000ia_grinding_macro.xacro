@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <!-- include macros for robot, end effector, workcell -->
+  <xacro:include filename="$(find fanuc_r1000ia_support)/urdf/r1000ia80f_macro.xacro"/>
+  <xacro:include filename="$(find grinding_eef_description)/urdf/grinding_eef_macro.xacro" />
+  <xacro:include filename="$(find ensenso_n10_description)/urdf/ensenso_n10_macro.xacro" />
+  <xacro:include filename="$(find grinding_workcell_description)/urdf/grinding_workcell_macro.xacro" />
+
+  <!-- create the robot and eef combo itself as a macro -->
+  <xacro:macro name="fanuc_r1000ia_ensenso_n10_grinding_support" params="prefix">
+
+  <!-- instantiate everything -->
+  <xacro:fanuc_r1000ia80f prefix="${prefix}" />
+  <xacro:grinding_eef prefix="${prefix}" />
+  <xacro:ensenso_n10 prefix="${prefix}" />
+  <xacro:grinding_workcell prefix="${prefix}" />
+
+  <!-- attach workcell to robot model -->
+  <joint name="${prefix}base_link-workcell_frame" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="${prefix}base_link" />
+    <child link="${prefix}grinding_workcell_frame" />
+  </joint>
+
+  <!-- attach eef to robot model -->
+  <joint name="${prefix}tool0-grinding_eef_frame" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="${prefix}link_6" />
+    <child link="${prefix}grinding_eef_frame" />
+  </joint>
+
+  <link name="${prefix}grinding_disk_tcp">
+  </link>
+  <joint name="${prefix}tool0-grinding_disk_tcp_frame" type="fixed">
+    <origin xyz="0 0 0.324" rpy="0 0 0" />
+    <parent link="${prefix}tool0" />
+    <child link="${prefix}grinding_disk_tcp" />
+  </joint>
+
+  <!-- attach Ensenso sensor to robot model (to eef) -->
+  <joint name="${prefix}tool0-ensenso_n10_frame" type="fixed">
+    <origin xyz="-0.215 0.04 0.052" rpy="-1.5707 0 0" />
+    <parent link="${prefix}tool0" />
+    <child link="${prefix}ensenso_n10_frame" />
+  </joint>
+
+  <link name="${prefix}ensenso_n10_tcp">
+  </link>
+  <joint name="${prefix}tool0-ensenso_n10_tcp_frame" type="fixed">
+    <origin xyz="-0.215 0.06 0.052" rpy="-1.5707 0 0" />
+    <parent link="${prefix}tool0" />
+    <child link="${prefix}ensenso_n10_tcp" />
+  </joint>
+  </xacro:macro>
+</robot>
+

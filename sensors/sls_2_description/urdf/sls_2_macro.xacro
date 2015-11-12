@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:macro name="sls_2" params="prefix">
+    <link name="${prefix}sls_2_frame">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://sls_2_description/meshes/visual/sls_2.dae"/>
+        </geometry>
+        <material name="red">
+          <color rgba="0.2709 0.01783 0.01783 1"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://sls_2_description/meshes/collision/sls_2.stl"/>
+        </geometry>
+      </collision>
+    </link>
+  </xacro:macro>
+</robot>

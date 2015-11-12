@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>institut_maupertuis_robots_descriptions</name>
+  <version>0.0.1</version>
+  <description>Institut Maupertuis robots descriptions.</description>
+  <author>Victor Lamoine - Intitut Maupertuis</author>
+  <maintainer email="victor.lamoine@gmail.com">Victor Lamoine</maintainer>
+  <license>BSD</license>
+
+  <url type="website">https://github.com/InstitutMaupertuis/institut_maupertuis_robots_descriptions/blob/indigo-devel/README.md</url>
+  <url type="bugtracker">https://github.com/InstitutMaupertuis/institut_maupertuis_robots_descriptions/issues</url>
+  <url type="repository">https://github.com/InstitutMaupertuis/institut_maupertuis_robots_descriptions/</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <exec_depend>ros_industrial</exec_depend>
+  <exec_depend>fanuc</exec_depend>
+  <exec_depend>fanuc_experimental</exec_depend>
+
+  <export>
+    <metapackage/>
+    <architecture_independent/>
+    <rosindex>
+      <tags>
+        <tag>metapackage</tag>
+        <tag>fanuc</tag>
+        <tag>industrial</tag>
+        <tag>ros-industrial</tag>
+        <tag>grinding</tag>
+      </tags>
+    </rosindex>
+  </export>
+</package>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package>
+  <name>sls_2_description</name>
+  <version>0.0.0</version>
+  <description>David SLS-2 description</description>
+  <maintainer email="victor.lamoine@gmail.com">Victor Lamoine</maintainer>
+  <license>BSD</license>
+
+  <url type="website">https://github.com/InstitutMaupertuis/</url>
+  <url type="bugtracker">https://github.com/InstitutMaupertuis/</url>
+  <url type="repository">https://github.com/InstitutMaupertuis/</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>xacro</run_depend>
+
+</package>
