@@ -8,21 +8,16 @@ This ROS package describes:
 - Work-cells
 - Robots
 
-<img src="https://raw.githubusercontent.com/InstitutMaupertuis/institut_maupertuis_robots_descriptions/indigo-devel/fanuc_r1000ia_sls_2_grinding_support/r1000ia_grinding.png" align="center" height="500">
+<img src="https://raw.githubusercontent.com/InstitutMaupertuis/institut_maupertuis_robots_descriptions/indigo-devel/fanuc_r1000ia_grinding/fanuc_r1000ia_sls_2_grinding_support/r1000ia_grinding.png" align="center" height="200">
 
-<img src="https://raw.githubusercontent.com/InstitutMaupertuis/institut_maupertuis_robots_descriptions/indigo-devel/fanuc_r1000ia_ensenso_n10_grinding_support/r1000ia_grinding.png" align="center" height="500">
+<img src="https://raw.githubusercontent.com/InstitutMaupertuis/institut_maupertuis_robots_descriptions/indigo-devel/fanuc_r1000ia_grinding/fanuc_r1000ia_ensenso_n10_grinding_support/r1000ia_grinding.png" align="center" height="200">
 
 Directories in the project
 --------------------------
 
 | Directory  | Description
 ------------ | -----------
-`fanuc_r1000ia_ensenso_n10_grinding_moveit_config` | `fanuc_r1000ia_ensenso_n10_grinding_support` MoveIt package
-`fanuc_r1000ia_ensenso_n10_grinding_support` | Fanuc R1000iA80f + Grinding end-effector + Ensenso N10 + grinding work-cell
-`fanuc_r1000ia_sls_2_grinding_moveit_config` | `fanuc_r1000ia_sls_2_grinding_support` MoveIt package
-`fanuc_r1000ia_sls_2_grinding_support` | Fanuc R1000iA80f + Grinding end-effector + David SLS-2 + grinding work-cell
-`grinding_effector_description` | Grinding end-effector
-`grinding_workcell_description` | Grinding work-cell
+`fanuc_r1000ia_grinding` | Fanuc R1000iA80f + Grinding end-effector + 3D sensor ( Ensenso or SLS-2) + grinding work-cell
 
 | `sensors`: Directory  | Description
 --------------------- | -----------
