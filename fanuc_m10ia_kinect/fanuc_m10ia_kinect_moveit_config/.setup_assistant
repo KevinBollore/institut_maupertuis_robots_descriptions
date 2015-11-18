@@ -1,0 +1,8 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: fanuc_m10ia_kinect_support
+    relative_path: urdf/m10ia_kinect_eef.xacro
+  SRDF:
+    relative_path: config/fanuc_m10ia_kinect.srdf
+  CONFIG:
+    generated_timestamp: 1447842954

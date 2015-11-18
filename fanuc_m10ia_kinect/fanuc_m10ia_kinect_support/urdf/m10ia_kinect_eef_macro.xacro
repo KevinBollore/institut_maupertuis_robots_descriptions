@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <!-- include macros for robot, mounting plante, Kinect -->
+  <xacro:include filename="$(find fanuc_m10ia_support)/urdf/m10ia_macro.xacro"/>
+  <xacro:include filename="$(find fanuc_m10ia_kinect_support)/urdf/mounting_plate_macro.xacro"/>
+  <xacro:include filename="$(find kinect_v1_description)/urdf/kinect_v1_macro.xacro" />
+
+  <!-- create the robot and eef combo itself as a macro -->
+  <xacro:macro name="fanuc_m10ia_kinect_support" params="prefix">
+
+  <!-- instantiate everything -->
+  <xacro:fanuc_m10ia prefix="${prefix}" />
+  <xacro:mounting_plate prefix="${prefix}" />
+  <xacro:kinect_v1 prefix="${prefix}" />
+
+  <!-- attach mounting plate to M-10iA model -->
+  <joint name="${prefix}tool0-mounting_plate_base_link" type="fixed">
+    <origin xyz="0 0 0.008" rpy="0 0 0" />
+    <parent link="${prefix}tool0" />
+    <child link="${prefix}mounting_plate_base_link" />
+  </joint>
+
+  <!-- attach eef to robot model -->
+  <joint name="${prefix}tool0-kinect_v1_frame" type="fixed">
+    <origin xyz="0 -0.01 0.028" rpy="0 0 0" />
+
+    <parent link="${prefix}tool0" />
+    <child link="${prefix}kinect_v1_frame" />
+  </joint>
+
+  <link name="${prefix}kinect_tcp">
+  </link>
+  <joint name="${prefix}tool0-kinect_tcp_frame" type="fixed">
+    <origin xyz="0 -0.01 0.028" rpy="0 0 0" />
+    <parent link="${prefix}tool0" />
+    <child link="${prefix}kinect_tcp" />
+  </joint>
+
+  </xacro:macro>
+</robot>

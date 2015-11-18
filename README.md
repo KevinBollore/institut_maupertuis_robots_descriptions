@@ -12,11 +12,14 @@ This ROS package describes:
 
 <img src="https://raw.githubusercontent.com/InstitutMaupertuis/institut_maupertuis_robots_descriptions/indigo-devel/fanuc_r1000ia_grinding/fanuc_r1000ia_ensenso_n10_grinding_support/r1000ia_grinding.png" align="center" height="200">
 
+<img src="https://raw.githubusercontent.com/InstitutMaupertuis/institut_maupertuis_robots_descriptions/indigo-devel/fanuc_m10ia_kinect/fanuc_m10ia_kinect_support/m10ia_kinect.png" align="center" height="200">
+
 Directories in the project
 --------------------------
 
 | Directory  | Description
 ------------ | -----------
+`fanuc_m10ia_kinect` | Fanuc M10iA with a Kinect mounted on the tool
 `fanuc_r1000ia_grinding` | Fanuc R1000iA80f + Grinding end-effector + 3D sensor ( Ensenso or SLS-2) + grinding work-cell
 
 | `sensors`: Directory  | Description

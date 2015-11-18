@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="robot_ip" />
+  <arg name="J23_factor" default="1" />
+  <arg name="use_bswap" default="true" />
+
+  <rosparam command="load" file="$(find fanuc_m10ia_support)/config/joint_names_m10ia.yaml" />
+
+  <include file="$(find fanuc_driver)/launch/robot_state.launch">
+    <arg name="robot_ip"   value="$(arg robot_ip)" />
+    <arg name="J23_factor" value="$(arg J23_factor)" />
+    <arg name="use_bswap"  value="$(arg use_bswap)" />
+  </include>
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" 
+    type="robot_state_publisher" />
+
+  <include file="$(find fanuc_m10ia_kinect_support)/launch/load_m10ia_kinect_eef.launch" />
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find industrial_robot_client)/config/robot_state_visualize.rviz" required="true" />
+</launch>
