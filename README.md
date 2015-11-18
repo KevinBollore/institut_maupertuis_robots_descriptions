@@ -27,6 +27,7 @@ Directories in the project
 | `sensors`: Directory  | Description
 --------------------- | -----------
 `ensenso_n10_description` | Ensenso N10
+`kinect_v1_description` | Microsoft Kinect for Xbox 360 without the support
 `sls_2_description` | David SLS-2
 
 Dependencies

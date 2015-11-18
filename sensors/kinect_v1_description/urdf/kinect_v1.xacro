@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+
+<robot name="kinect_v1" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find kinect_v1_description)/urdf/kinect_v1_macro.xacro"/>
+  <xacro:kinect_v1 prefix=""/>
+</robot>
