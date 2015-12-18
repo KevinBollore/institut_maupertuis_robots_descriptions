@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <!-- include macros for robot, mounting plante, Ensenso -->
+  <xacro:include filename="$(find fanuc_m10ia_support)/urdf/m10ia_macro.xacro"/>
+  <xacro:include filename="$(find fanuc_m10ia_ensenso_support)/urdf/mounting_plate_macro.xacro"/>
+  <xacro:include filename="$(find ensenso_n10_description)/urdf/ensenso_n10_macro.xacro" />
+
+  <!-- create the robot and eef combo itself as a macro -->
+  <xacro:macro name="fanuc_m10ia_ensenso_support" params="prefix">
+
+  <!-- instantiate everything -->
+  <xacro:fanuc_m10ia prefix="${prefix}" />
+  <xacro:mounting_plate prefix="${prefix}" />
+  <xacro:ensenso_n10 prefix="${prefix}" />
+
+  <!-- attach mounting plate to M-10iA model -->
+  <joint name="${prefix}tool0-mounting_plate_base_link" type="fixed">
+    <origin xyz="0 0 0.008" rpy="0 0 0" />
+    <parent link="${prefix}tool0" />
+    <child link="${prefix}mounting_plate_base_link" />
+  </joint>
+
+  <!-- attach eef to robot model -->
+  <joint name="${prefix}tool0-ensenso_n10_frame" type="fixed">
+    <origin xyz="0 -0.088 0.032" rpy="0 0 -1.5707" />
+
+    <parent link="${prefix}tool0" />
+    <child link="${prefix}ensenso_n10_frame" />
+  </joint>
+
+  <link name="${prefix}ensenso_tcp">
+  </link>
+  <joint name="${prefix}tool0-ensenso_tcp_frame" type="fixed">
+    <origin xyz="0 -0.088 0.035" rpy="0 0 -1.5707" />
+    <parent link="${prefix}tool0" />
+    <child link="${prefix}ensenso_tcp" />
+  </joint>
+
+  </xacro:macro>
+</robot>

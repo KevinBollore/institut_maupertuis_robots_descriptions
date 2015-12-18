@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+
+<robot name="mounting_plate" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find fanuc_m10ia_ensenso_support)/urdf/mounting_plate_macro.xacro"/>
+  <xacro:mounting_plate prefix=""/>
+</robot>

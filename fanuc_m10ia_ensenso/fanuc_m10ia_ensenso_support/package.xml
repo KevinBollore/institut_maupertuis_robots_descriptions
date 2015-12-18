@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package>
+  <name>fanuc_m10ia_ensenso_support</name>
+  <version>0.0.0</version>
+  <description>Fanuc M-10iA with Ensenso end-effector</description>
+  <maintainer email="victor.lamoine@gmail.com">Victor Lamoine</maintainer>
+  <license>All rights reserved</license>
+
+<!--
+  <url type="website">http://wiki.ros.org/fanuc_m10ia_support</url>
+  <url type="bugtracker">https://github.com/ros-industrial/fanuc/issues</url>
+  <url type="repository">https://github.com/ros-industrial/fanuc</url>
+-->
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend version_gte="1.9.55">roslaunch</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>ensenso_n10_description</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>tf_conversions</build_depend>
+  <build_depend>moveit_ros_planning_interface</build_depend>
+  <build_depend>visualization_msgs</build_depend>
+
+  <run_depend>joint_state_publisher</run_depend>
+  <run_depend>robot_state_publisher</run_depend>
+  <run_depend>rviz</run_depend>
+  <run_depend>xacro</run_depend>
+  <run_depend>fanuc_m10ia_support</run_depend>
+  <run_depend>ensenso_n10_description</run_depend>
+</package>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:macro name="mounting_plate" params="prefix">
+    <link name="${prefix}mounting_plate_base_link">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_m10ia_ensenso_support/meshes/visual/mounting_plate.dae"/>
+        </geometry>
+        <material name="grey">
+          <color rgba="0.4 0.4 0.4 1"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_m10ia_ensenso_support/meshes/collision/mounting_plate.stl"/>
+        </geometry>
+      </collision>
+    </link>
+  </xacro:macro>
+</robot>

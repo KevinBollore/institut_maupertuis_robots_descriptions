@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+
+<robot name="fanuc_m10ia_ensenso" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find fanuc_m10ia_ensenso_support)/urdf/m10ia_ensenso_eef_macro.xacro"/>
+  <xacro:fanuc_m10ia_ensenso_support prefix=""/>
+</robot>
