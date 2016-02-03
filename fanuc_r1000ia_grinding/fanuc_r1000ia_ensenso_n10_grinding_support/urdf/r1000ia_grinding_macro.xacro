@@ -24,8 +24,7 @@
       <parent link="${prefix}link_6"/>
       <child link="${prefix}grinding_eef_frame"/>
     </joint>
-    <link name="${prefix}grinding_disk_tcp">
-  </link>
+    <link name="${prefix}grinding_disk_tcp"/>
     <joint name="${prefix}tool0-grinding_disk_tcp_frame" type="fixed">
       <origin xyz="0 0 0.324" rpy="0 0 0"/>
       <parent link="${prefix}tool0"/>
@@ -37,8 +36,7 @@
       <parent link="${prefix}tool0"/>
       <child link="${prefix}ensenso_n10_frame"/>
     </joint>
-    <link name="${prefix}ensenso_n10_tcp">
-  </link>
+    <link name="${prefix}ensenso_n10_tcp"/>
     <joint name="${prefix}tool0-ensenso_n10_tcp_frame" type="fixed">
       <origin xyz="-0.215 0.06 0.052" rpy="-1.5707 0 0"/>
       <parent link="${prefix}tool0"/>

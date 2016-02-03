@@ -22,8 +22,7 @@
       <parent link="${prefix}tool0"/>
       <child link="${prefix}kinect_v1_frame"/>
     </joint>
-    <link name="${prefix}kinect_tcp">
-  </link>
+    <link name="${prefix}kinect_tcp"/>
     <joint name="${prefix}tool0-kinect_tcp_frame" type="fixed">
       <origin xyz="0 -0.01 0.028" rpy="0 0 0"/>
       <parent link="${prefix}tool0"/>
