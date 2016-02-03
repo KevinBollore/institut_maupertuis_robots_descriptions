@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
-
   <xacro:macro name="sls_2" params="prefix">
     <link name="${prefix}sls_2_frame">
       <visual>

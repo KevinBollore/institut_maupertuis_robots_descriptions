@@ -1,6 +1,5 @@
-<?xml version="1.0" ?>
-
-<robot name="grinding_eef" xmlns:xacro="http://ros.org/wiki/xacro">
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="grinding_eef">
   <xacro:include filename="$(find grinding_eef_description)/urdf/grinding_eef_macro.xacro"/>
   <xacro:grinding_eef prefix=""/>
 </robot>

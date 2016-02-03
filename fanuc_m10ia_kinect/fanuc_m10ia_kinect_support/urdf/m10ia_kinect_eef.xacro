@@ -1,6 +1,5 @@
-<?xml version="1.0" ?>
-
-<robot name="fanuc_m10ia_kinect" xmlns:xacro="http://ros.org/wiki/xacro">
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="fanuc_m10ia_kinect">
   <xacro:include filename="$(find fanuc_m10ia_kinect_support)/urdf/m10ia_kinect_eef_macro.xacro"/>
   <xacro:fanuc_m10ia_kinect_support prefix=""/>
 </robot>

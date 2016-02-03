@@ -1,6 +1,5 @@
-<?xml version="1.0" ?>
-
-<robot name="sls_2" xmlns:xacro="http://ros.org/wiki/xacro">
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="sls_2">
   <xacro:include filename="$(find sls_2_description)/urdf/sls_2_macro.xacro"/>
   <xacro:sls_2 prefix=""/>
 </robot>
