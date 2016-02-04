@@ -1,6 +1,6 @@
 <package>
 
-  <name>test</name>
+  <name>fanuc_m10ia_ensenso_moveit_config</name>
   <version>0.2.0</version>
   <description>
      An automatically generated package with all the configuration and launch files for using the fanuc_m10ia_ensenso with the MoveIt Motion Planning Framework

@@ -13,6 +13,6 @@
   
   <!-- Load the robot specific controller manager; this sets the moveit_controller_manager ROS parameter -->
   <arg name="moveit_controller_manager" default="fanuc_m10ia_ensenso" />
-  <include file="$(find test)/launch/$(arg moveit_controller_manager)_moveit_controller_manager.launch.xml" />
+  <include file="$(find fanuc_m10ia_ensenso_moveit_config)/launch/$(arg moveit_controller_manager)_moveit_controller_manager.launch.xml" />
   
 </launch>

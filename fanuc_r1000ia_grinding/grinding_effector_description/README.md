@@ -1,3 +1,3 @@
 # Institut Maupertuis grinding
 
-Robot grinding end effector description.
+Fanuc R1000iA 80f grinding end effector description.
