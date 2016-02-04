@@ -2,7 +2,7 @@
 <package>
   <name>fanuc_r1000ia_ensenso_n10_grinding_support</name>
   <version>0.0.0</version>
-  <description>Fanuc R-1000iA with a grinding end effector</description>
+  <description>Fanuc R-1000iA 80f with a grinding end effector and work-cell</description>
   <maintainer email="victor.lamoine@gmail.com">Victor Lamoine</maintainer>
   <license>BSD</license>
 

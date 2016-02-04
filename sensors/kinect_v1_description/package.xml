@@ -2,15 +2,10 @@
 <package>
   <name>kinect_v1_description</name>
   <version>0.0.0</version>
-  <description>Microsoft Kinect v1 description. The support has been removed from this description</description>
+  <description>Microsoft Kinect v1 description. The support has been removed in this description</description>
   <maintainer email="victor.lamoine@gmail.com">Victor Lamoine</maintainer>
   <license>BSD</license>
 
-  <url type="website">https://github.com/InstitutMaupertuis/</url>
-  <url type="bugtracker">https://github.com/InstitutMaupertuis/</url>
-  <url type="repository">https://github.com/InstitutMaupertuis/</url>
-
   <buildtool_depend>catkin</buildtool_depend>
   <run_depend>xacro</run_depend>
-
 </package>

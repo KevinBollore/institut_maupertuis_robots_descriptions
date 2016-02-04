@@ -4,13 +4,7 @@
   <version>0.0.0</version>
   <description>Fanuc M-10iA with Ensenso end-effector</description>
   <maintainer email="victor.lamoine@gmail.com">Victor Lamoine</maintainer>
-  <license>All rights reserved</license>
-
-<!--
-  <url type="website">http://wiki.ros.org/fanuc_m10ia_support</url>
-  <url type="bugtracker">https://github.com/ros-industrial/fanuc/issues</url>
-  <url type="repository">https://github.com/ros-industrial/fanuc</url>
--->
+  <license>BSD</license>
 
   <buildtool_depend>catkin</buildtool_depend>
 
