@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8.3)
 
 project(fanuc_m10ia_kinect_support)
 
-find_package(catkin REQUIRED kinect_v1_description)
+find_package(catkin REQUIRED)
 
 catkin_package()
 
