@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8.3)
 
 project(fanuc_r1000ia_ensenso_n10_grinding_support)
 
-find_package(catkin REQUIRED grinding_eef_description)
+find_package(catkin REQUIRED)
 
 catkin_package()
 
