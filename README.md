@@ -2,7 +2,7 @@
 
 ![Institut Maupertuis logo](https://avatars1.githubusercontent.com/u/12760694?v=3&s=200)
 
-![Travis-CI](https://api.travis-ci.org/InstitutMaupertuis/institut_maupertuis_robots_descriptions.svg)
+[![Travis-CI](https://api.travis-ci.org/InstitutMaupertuis/institut_maupertuis_robots_descriptions.svg?branch=indigo-devel)](https://travis-ci.org/InstitutMaupertuis/institut_maupertuis_robots_descriptions/branches))
 
 This ROS package describes:
 - Sensors
