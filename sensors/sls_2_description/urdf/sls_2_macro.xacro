@@ -1,11 +1,53 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
-  <xacro:macro name="sls_2" params="prefix">
-    <link name="${prefix}sls_2_frame">
+  <xacro:macro name="sls_2" params="prefix camera_angle camera_trans">
+
+    <!-- This link must be attached to whatever the SLS-2 is attached -->
+    <link name="${prefix}sls_2_frame"/>
+
+    <link name="${prefix}sls_2_camera">
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://sls_2_description/meshes/visual/sls_2.dae"/>
+          <mesh filename="package://sls_2_description/meshes/visual/sls_2_camera.dae"/>
+        </geometry>
+        <material name="black">
+          <color rgba="0.15 0.15 0.15 1"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://sls_2_description/meshes/collision/sls_2_camera.stl"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="${prefix}sls_2_inter_cam"/>
+
+    <link name="${prefix}sls_2_cam_fixture">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://sls_2_description/meshes/visual/sls_2_cam_fixture.dae"/>
+        </geometry>
+        <material name="black">
+          <color rgba="0.15 0.15 0.15 1"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://sls_2_description/meshes/collision/sls_2_cam_fixture.stl"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="${prefix}sls_2_projector_ruler">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://sls_2_description/meshes/visual/sls_2_projector_ruler.dae"/>
         </geometry>
         <material name="red">
           <color rgba="0.2709 0.01783 0.01783 1"/>
@@ -14,9 +56,34 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://sls_2_description/meshes/collision/sls_2.stl"/>
+          <mesh filename="package://sls_2_description/meshes/collision/sls_2_projector_ruler.stl"/>
         </geometry>
       </collision>
     </link>
+
+    <joint name="${prefix}sls_2_frame_to_camera" type="fixed">
+      <parent link="${prefix}sls_2_frame" />
+      <child link="${prefix}sls_2_camera" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+   <joint name="${prefix}sls_2_camera_inter_cam" type="fixed">
+      <parent link="${prefix}sls_2_camera" />
+      <child link="${prefix}sls_2_inter_cam" />
+      <origin xyz="0 0 0" rpy="${camera_angle} 0 0"/>
+    </joint>
+
+    <joint name="${prefix}sls_2_camera_to_fixture" type="fixed">
+      <parent link="${prefix}sls_2_inter_cam" />
+      <child link="${prefix}sls_2_cam_fixture" />
+      <origin xyz="0.004 0 0.026" rpy="0 0 0"/>
+    </joint>
+
+    <joint name="${prefix}sls_2_projector_ruler" type="fixed">
+      <parent link="${prefix}sls_2_cam_fixture" />
+      <child link="${prefix}sls_2_projector_ruler" />
+      <origin xyz="-0.004 ${camera_trans} -0.016" rpy="0 0 0"/>
+    </joint>
+
   </xacro:macro>
 </robot>
