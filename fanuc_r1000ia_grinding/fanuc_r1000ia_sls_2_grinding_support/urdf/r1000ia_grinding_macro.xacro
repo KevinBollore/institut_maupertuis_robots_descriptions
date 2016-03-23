@@ -13,7 +13,7 @@
     <xacro:fanuc_r1000ia80f prefix="${prefix}"/>
     <xacro:grinding_eef prefix="${prefix}"/>
     <xacro:sls_2_interface prefix="${prefix}"/>
-    <xacro:sls_2 prefix="${prefix}"/>
+    <xacro:sls_2 prefix="${prefix}" camera_angle="-0.349" camera_trans="-0.18"/>
     <!-- attach workcell to robot model -->
     <joint name="${prefix}base_link-workcell_frame" type="fixed">
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -40,7 +40,7 @@
     </joint>
     <!-- attach SLS-2 sensor to robot model (to eef) -->
     <joint name="${prefix}tool0-sls_2_frame" type="fixed">
-      <origin xyz="-0.30 -0.043 0.085" rpy="0 -1.5707 1.5707"/>
+      <origin xyz="-0.35 -0.056 0.072" rpy="0.349 -1.5707 1.5707"/>
       <parent link="${prefix}tool0"/>
       <child link="${prefix}sls_2_frame"/>
     </joint>
