@@ -18,5 +18,29 @@
         </geometry>
       </collision>
     </link>
+    <link name="${prefix}grinding_table_frame">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://grinding_workcell_description/meshes/visual/table.dae"/>
+        </geometry>
+        <material name="white">
+          <color rgba="0.6 0.6 0.6 1"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0.0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://grinding_workcell_description/meshes/collision/table.stl"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="${prefix}workcell_to_table" type="fixed">
+      <parent link="${prefix}grinding_workcell_frame" />
+      <child link="${prefix}grinding_table_frame" />
+      <origin xyz="1.5 0 -0.52" rpy="0 0 0"/>
+    </joint>
+
   </xacro:macro>
 </robot>
