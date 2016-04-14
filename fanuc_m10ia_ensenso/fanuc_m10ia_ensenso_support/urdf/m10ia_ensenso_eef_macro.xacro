@@ -23,7 +23,7 @@
       <child link="${prefix}ensenso_n10_frame"/>
     </joint>
     <link name="${prefix}ensenso_tcp">
-  </link>
+    </link>
     <joint name="${prefix}tool0-ensenso_tcp_frame" type="fixed">
       <origin xyz="0 -0.088 0.035" rpy="0 0 -1.5707"/>
       <parent link="${prefix}tool0"/>
