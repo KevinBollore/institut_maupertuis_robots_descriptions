@@ -1,0 +1,9 @@
+<!--
+-->
+<launch>
+  <!-- DavidSDK server IP / computer network -->
+  <arg name="davidSDK_ip" default="192.168.100.48" />
+  <param name="davidSDK_ip_param" value="$(arg davidSDK_ip)" />
+
+  <node name="sls_2_images" pkg="sls_2_publishers" type="sls_2_images" output="screen" required="true" />
+</launch>

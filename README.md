@@ -39,6 +39,7 @@ Dependencies
 - [`industrial-core`](http://wiki.ros.org/industrial_core)
 - [`fanuc`](https://github.com/InstitutMaupertuis/fanuc.git) :warning: Joint limits have been tweaked
 - [`fanuc_experimental`](https://github.com/InstitutMaupertuis/fanuc_experimental.git) :warning: Joint limits have been tweaked
+- [`yaml-cpp`](https://launchpad.net/ubuntu/+source/yaml-cpp)
 
 This package has been tested with Ubuntu 14.04 and ROS Indigo.
 

@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<launch>
+  <arg name="robot_ip"/>
+  <include file="$(find fanuc_r1000ia_sls_2_grinding_support)/launch/robot_state_visualize_r1000ia_grinding.launch">
+    <arg name="robot_ip" value="$(arg robot_ip)"/>
+  </include>
+
+  <arg name="camera_number" default="1"/>
+  <arg name="camera_name" default="sls_2"/>
+  <arg name="image_topic" default="sls_2_image"/>
+  <arg name="output_file" default="$(find fanuc_r1000ia_sls_2_grinding_resources)/yaml/caljob.yaml"/>
+  <arg name="capture_scene" default="false"/>
+  <arg name="quit" default="false"/>
+  <arg name="joints_topic" default="joint_states"/>
+  <arg name="motion_type" default="joint"/>
+  <arg name="to_frame" default="target_frame"/>
+  <arg name="from_frame" default="base_link"/>
+  <arg name="image_width" default="1280" />
+  <arg name="image_height" default="960" />
+
+  <node pkg="caljob_creator" type="caljob_creator_node" name="caljob_creator">
+    <param name="camera_name" value="$(arg camera_name)"/>
+    <param name="image_topic" value="$(arg image_topic)"/>
+    <param name="output_file" value="$(arg output_file)"/>
+    <param name="capture_scene" value="$(arg capture_scene)"/>
+    <param name="quit" value="$(arg quit)"/>
+    <param name="joints_topic" value="$(arg joints_topic)"/>
+    <param name="motion_type" value="$(arg motion_type)"/>
+    <param name="to_frame" value="$(arg to_frame)"/>
+    <param name="from_frame" value="$(arg from_frame)"/>
+    <param name="image_width" value="$(arg image_width)" />
+    <param name="image_height" value="$(arg image_height)" />
+  </node>
+</launch>

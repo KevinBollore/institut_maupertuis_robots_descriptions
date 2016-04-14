@@ -2,7 +2,21 @@
 <launch>
   <include file="$(find fanuc_r1000ia_sls_2_grinding_support)/launch/load_r1000ia_grinding.launch" />
   <param name="use_gui" value="true" />
-  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+  <!-- joint state publisher which combines the mutable and the real joint states for the scene -->
+  <node name="combined_joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+    <rosparam param="source_list">[fanuc/joint_states, mutable_joint_states]</rosparam>
+    <param name="publish_default_velocities" value="true" />
+    <param name="publish_default_efforts" value="true" />
+    <param name="publish_default_positions" value="true" />
+  </node>
+
+  <!-- publish the joint states associated with transforms that might be calibrated -->
+  <node name="mutable_joint_state_publisher" pkg="industrial_extrinsic_cal" type="mutable_joint_state_publisher" output="screen">
+    <param name="mutable_joint_state_yaml_file" value="$(find fanuc_r1000ia_sls_2_grinding_resources)/yaml/mutable_joint_states.yaml" />
+    <remap from="joint_states" to="/mutable_joint_states"/>
+  </node>
+
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find fanuc_r1000ia_sls_2_grinding_support)/config/robot_state_visualize.rviz" required="true" />
 </launch>
