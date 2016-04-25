@@ -7,7 +7,7 @@ compiler:
 
 notifications:
   email:
-    on_failure: never
+    on_failure: always
 
 env:
   matrix:
@@ -19,14 +19,9 @@ env:
       ROS_REPOSITORY_PATH=http://packages.ros.org/ros-shadow-fixed/ubuntu
 
 install:
-  - git clone https://github.com/ros-industrial/industrial_calibration.git
-  - git clone https://github.com/ros-industrial/fanuc_experimental.git
   - git clone https://github.com/ros-industrial/industrial_ci.git .ci_config
 
 script:
-  - source .travis_ceres.sh
-  - source .travis_davidSDK.sh
-  - source .travis_ensensoSDK.sh
-  - source .travis_vtk.sh
-  - source .travis_pcl.sh
+  - source .travis.sh
   - source .ci_config/travis.sh
+
