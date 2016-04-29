@@ -82,4 +82,5 @@
     <disable_collisions link1="sls_2_frame_x_trans" link2="target_frame_x_trans" reason="Never" />
     <disable_collisions link1="sls_2_interface_base_link" link2="target_frame_x_trans" reason="Never" />
     <disable_collisions link1="sls_2_projector_ruler" link2="target_frame_x_trans" reason="Never" />
+    <disable_collisions link1="sls_2_projector_ruler" link2="sls_2_interface_base_link" reason="Never" />
 </robot>
