@@ -1,7 +1,9 @@
  [![Institut Maupertuis logo](https://avatars1.githubusercontent.com/u/12760694?v=3&s=80)](http://www.institutmaupertuis.fr) Institut Maupertuis robots descriptions
 =======================================
 
-Travis CI - [![Travis-CI](https://api.travis-ci.org/InstitutMaupertuis/institut_maupertuis_robots_descriptions.svg?branch=indigo-devel)](https://travis-ci.org/InstitutMaupertuis/institut_maupertuis_robots_descriptions/branches) 
+# Travis CI
+
+[![Travis-CI](https://api.travis-ci.org/InstitutMaupertuis/institut_maupertuis_robots_descriptions.svg?branch=indigo-devel)](https://travis-ci.org/InstitutMaupertuis/institut_maupertuis_robots_descriptions/branches) 
 
 # General information
 
