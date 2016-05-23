@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="excelcar_workcell">
+  <xacro:include filename="$(find excelcar_workcell_description)/urdf/excelcar_workcell_macro.xacro"/>
+  <xacro:excelcar_workcell prefix=""/>
+</robot>

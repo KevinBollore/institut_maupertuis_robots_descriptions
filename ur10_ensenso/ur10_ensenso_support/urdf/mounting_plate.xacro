@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="mounting_plate">
+  <xacro:include filename="$(find ur10_ensenso_support)/urdf/mounting_plate_macro.xacro"/>
+  <xacro:mounting_plate prefix=""/>
+</robot>
