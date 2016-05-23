@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>fanuc_r1000ia_sls_2_grinding_resources</name>
+  <version>0.0.0</version>
+  <description>Resource package for the extrinsic calibration</description>
+  <maintainer email="victor.lamoine@gmail.com">Victor Lamoine</maintainer>
+  <license>BSD</license>
+
+  <build_depend version_gte="1.9.55">roslaunch</build_depend>
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>cv_bridge</build_depend>
+  <build_depend>tf_conversions</build_depend>
+  <build_depend>moveit_ros_planning_interface</build_depend>
+  <build_depend>visualization_msgs</build_depend>
+
+  <exec_depend>industrial_calibration</exec_depend>
+  <exec_depend>cv_bridge</exec_depend>
+  <exec_depend>sls_2_publishers</exec_depend>
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>tf_conversions</exec_depend>
+  <exec_depend>moveit_ros_planning_interface</exec_depend>
+  <exec_depend>visualization_msgs</exec_depend>
+</package>

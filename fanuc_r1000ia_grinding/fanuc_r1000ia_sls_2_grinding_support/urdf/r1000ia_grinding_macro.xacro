@@ -1,11 +1,15 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <!-- Macro to create 6 joints/links between tool0 and SLS-2 frame -->
+  <xacro:include filename="$(find industrial_extrinsic_cal)/urdf/calibration_transform_macro.xacro"/>
+
   <!-- include macros for robot, end effector, workcell -->
   <xacro:include filename="$(find grinding_workcell_description)/urdf/grinding_workcell_macro.xacro"/>
   <xacro:include filename="$(find fanuc_r1000ia_support)/urdf/r1000ia80f_macro.xacro"/>
   <xacro:include filename="$(find grinding_eef_description)/urdf/grinding_eef_macro.xacro"/>
   <xacro:include filename="$(find fanuc_r1000ia_sls_2_grinding_support)/urdf/sls_2_interface_macro.xacro"/>
   <xacro:include filename="$(find sls_2_description)/urdf/sls_2_macro.xacro"/>
+
   <!-- create the robot and eef combo itself as a macro -->
   <xacro:macro name="fanuc_r1000ia_sls_2_grinding_support" params="prefix">
     <!-- instantiate everything -->
@@ -13,13 +17,14 @@
     <xacro:fanuc_r1000ia80f prefix="${prefix}"/>
     <xacro:grinding_eef prefix="${prefix}"/>
     <xacro:sls_2_interface prefix="${prefix}"/>
-    <xacro:sls_2 prefix="${prefix}" camera_angle="-0.349" camera_trans="-0.18"/>
+    <xacro:sls_2 prefix="${prefix}" camera_angle="-0.2792" camera_trans="0.2"/>
     <!-- attach workcell to robot model -->
     <joint name="${prefix}base_link-workcell_frame" type="fixed">
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <parent link="${prefix}base_link"/>
       <child link="${prefix}grinding_workcell_frame"/>
     </joint>
+
     <!-- attach eef to robot model -->
     <joint name="${prefix}tool0-grinding_eef_frame" type="fixed">
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -32,23 +37,20 @@
       <parent link="${prefix}tool0"/>
       <child link="${prefix}grinding_disk_tcp"/>
     </joint>
+
     <!-- attach SLS-2 interface to eef -->
     <joint name="${prefix}tool0-sls_2_interface_base_link" type="fixed">
       <origin xyz="-0.267 -0.054 0.0828" rpy="0 0 0"/>
       <parent link="${prefix}tool0"/>
       <child link="${prefix}sls_2_interface_base_link"/>
     </joint>
-    <!-- attach SLS-2 sensor to robot model (to eef) -->
-    <joint name="${prefix}tool0-sls_2_frame" type="fixed">
-      <origin xyz="-0.35 -0.056 0.072" rpy="0.349 -1.5707 1.5707"/>
-      <parent link="${prefix}tool0"/>
-      <child link="${prefix}sls_2_frame"/>
-    </joint>
-    <link name="${prefix}sls_2_tcp"/>
-    <joint name="${prefix}tool0-sls_2_tcp_frame" type="fixed">
-      <origin xyz="-0.3 -0.1 0.06" rpy="1.5707 0 0"/>
-      <parent link="${prefix}tool0"/>
-      <child link="${prefix}sls_2_tcp"/>
-    </joint>
+
+    <!-- Create 5 links and 6 joints between link sls_2_frame and tool0 link
+         Uses child link as the child link of the 6th joint -->
+    <xacro:calibration_definitions child_link="${prefix}sls_2_frame" parent_link="${prefix}tool0" />
+
+    <!-- Calibration target definitions -->
+    <link name="target_frame"/>
+    <xacro:calibration_definitions child_link="target_frame" parent_link="base"/>
   </xacro:macro>
 </robot>

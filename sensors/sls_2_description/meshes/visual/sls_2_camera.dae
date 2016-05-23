@@ -3,10 +3,10 @@
   <asset>
     <contributor>
       <author>Blender User</author>
-      <authoring_tool>Blender 2.77.0 commit date:2016-02-26, commit time:12:32, hash:b594b25</authoring_tool>
+      <authoring_tool>Blender 2.77.0 commit date:2016-04-05, commit time:18:12, hash:abf6f08</authoring_tool>
     </contributor>
-    <created>2016-03-22T14:30:13</created>
-    <modified>2016-03-22T14:30:13</modified>
+    <created>2016-05-23T10:03:17</created>
+    <modified>2016-05-23T10:03:17</modified>
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
@@ -213,7 +213,7 @@
   <library_visual_scenes>
     <visual_scene id="Scene" name="Scene">
       <node id="camera" name="camera" type="NODE">
-        <matrix sid="transform">8.22857e-11 -9.99987e-4 2.91522e-11 0 4.22613e-4 8.35462e-12 -9.06296e-4 0 9.06296e-4 8.68964e-11 4.22613e-4 -1.13687e-13 0 0 0 1</matrix>
+        <matrix sid="transform">-4.22613e-4 3.53562e-11 9.06296e-4 0 6.38127e-11 -9.99987e-4 6.87676e-11 0.028 9.06296e-4 8.68964e-11 4.22613e-4 0.01 0 0 0 1</matrix>
         <instance_geometry url="#Assemblage_SLS_2_-_Assemblage_camera-1_Camera-1-mesh" name="camera">
           <bind_material>
             <technique_common>
@@ -223,7 +223,7 @@
         </instance_geometry>
       </node>
       <node id="camera_support" name="camera_support" type="NODE">
-        <matrix sid="transform">8.22857e-11 -9.99987e-4 2.91522e-11 0 4.22613e-4 8.35462e-12 -9.06296e-4 0 9.06296e-4 8.68964e-11 4.22613e-4 0 0 0 0 1</matrix>
+        <matrix sid="transform">-4.22613e-4 3.53562e-11 9.06296e-4 0 6.38127e-11 -9.99987e-4 6.87676e-11 0.028 9.06296e-4 8.68964e-11 4.22613e-4 0.01 0 0 0 1</matrix>
         <instance_geometry url="#Assemblage_SLS_2_-_Assemblage_camera-1_Interface_camera_support-mesh" name="camera_support">
           <bind_material>
             <technique_common>
@@ -233,7 +233,7 @@
         </instance_geometry>
       </node>
       <node id="camera_lens" name="camera_lens" type="NODE">
-        <matrix sid="transform">8.22857e-11 -9.99987e-4 2.91522e-11 0 4.22613e-4 8.35462e-12 -9.06296e-4 0 9.06296e-4 8.68964e-11 4.22613e-4 -1.13687e-13 0 0 0 1</matrix>
+        <matrix sid="transform">-4.22613e-4 3.53562e-11 9.06296e-4 0 6.38127e-11 -9.99987e-4 6.87676e-11 0.028 9.06296e-4 8.68964e-11 4.22613e-4 0.01 0 0 0 1</matrix>
         <instance_geometry url="#Assemblage_SLS_2_-_Assemblage_camera-1_Objectif-1-mesh" name="camera_lens">
           <bind_material>
             <technique_common>

@@ -3,10 +3,10 @@
   <asset>
     <contributor>
       <author>Blender User</author>
-      <authoring_tool>Blender 2.77.0 commit date:2016-02-26, commit time:12:32, hash:b594b25</authoring_tool>
+      <authoring_tool>Blender 2.77.0 commit date:2016-04-05, commit time:18:12, hash:abf6f08</authoring_tool>
     </contributor>
-    <created>2016-03-22T14:29:40</created>
-    <modified>2016-03-22T14:29:40</modified>
+    <created>2016-05-23T10:04:06</created>
+    <modified>2016-05-23T10:04:06</modified>
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
@@ -83,7 +83,7 @@
   <library_visual_scenes>
     <visual_scene id="Scene" name="Scene">
       <node id="cam_fixture" name="cam_fixture" type="NODE">
-        <matrix sid="transform">7.54969e-11 -9.99987e-4 4.37108e-11 0.001762619 0 -4.37108e-11 -9.99987e-4 1.14739e-6 9.99987e-4 7.54969e-11 0 -0.04530337 0 0 0 1</matrix>
+        <matrix sid="transform">7.54969e-11 -1.50994e-10 9.99987e-4 2.61923e-6 0 -9.99987e-4 -1.50994e-10 0.02800115 9.99987e-4 0 -7.54969e-11 -0.03530337 0 0 0 1</matrix>
         <instance_geometry url="#Assemblage_SLS_2_-_Assemblage_camera-1_Support_camera-1-mesh" name="cam_fixture">
           <bind_material>
             <technique_common>

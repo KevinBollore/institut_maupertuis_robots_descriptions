@@ -23,4 +23,5 @@
   <run_depend>xacro</run_depend>
   <run_depend>grinding_eef_description</run_depend>
   <run_depend>sls_2_description</run_depend>
+  <run_depend>industrial_calibration</run_depend>
 </package>

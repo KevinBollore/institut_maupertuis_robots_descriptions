@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<launch>
+  <arg name="package_path" default="$(find fanuc_r1000ia_sls_2_grinding_resources)/yaml/" />
+
+  <!-- Publish images coming from the SLS-2 sensor on a ROS topic -->
+  <include file="$(find sls_2_publishers)/launch/sls_2_images.launch" />
+
+  <!-- Launch service which when called will move robot and then indicate scene is ready   -->
+  <node pkg="industrial_extrinsic_cal" type="ros_robot_trigger_action_service" name="rosRobotSceneTrigger" output="screen" />
+
+  <!-- Launch the extrinsic calibration service -->
+  <node pkg="industrial_extrinsic_cal" type="service_node" name="calibration_service_node" output="screen" >
+    <!-- Look in local package for configuration yaml files -->
+    <param name="yaml_file_path" value="$(arg package_path)"/>
+    <rosparam>
+      camera_file: "sls_2_camera_def.yaml"
+      target_file: "circles10x10.yaml"
+      cal_job_file: "caljob.yaml"
+      store_results_package_name: "fanuc_r1000ia_sls_2_grinding_resources"
+      store_results_file_name: "cal_results.launch"
+    </rosparam>
+  </node>
+</launch>
