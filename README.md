@@ -18,6 +18,8 @@ This ROS package describes:
 <img src="https://raw.githubusercontent.com/InstitutMaupertuis/institut_maupertuis_robots_descriptions/indigo-devel/fanuc_m10ia_kinect/fanuc_m10ia_kinect_support/m10ia_kinect.png" align="center" height="200">
 <img src="https://raw.githubusercontent.com/InstitutMaupertuis/institut_maupertuis_robots_descriptions/indigo-devel/fanuc_m10ia_ensenso/fanuc_m10ia_ensenso_support/m10ia_ensenso.png" align="center" height="200">
 
+<img src="https://raw.githubusercontent.com/InstitutMaupertuis/institut_maupertuis_robots_descriptions/indigo-devel/ur10_ensenso/ur10_ensenso_support/ur10_ensenso.png" align="center" height="200">
+
 Directories in the project
 --------------------------
 
@@ -26,6 +28,7 @@ Directories in the project
 `fanuc_m10ia_ensenso` | Fanuc M10iA with a Ensenso mounted on the tool
 `fanuc_m10ia_kinect` | Fanuc M10iA with a Kinect mounted on the tool
 `fanuc_r1000ia_grinding` | Fanuc R1000iA80f + Grinding end-effector + 3D sensor ( Ensenso or SLS-2) + grinding work-cell
+`ur10_ensenso` | Univeral Robot UR10 + Ensenso N10 + Excelcar work-cell
 
 | `sensors`: Directory  | Description
 --------------------- | -----------
@@ -39,6 +42,7 @@ Dependencies
 - [`industrial-core`](http://wiki.ros.org/industrial_core)
 - [`fanuc`](https://github.com/InstitutMaupertuis/fanuc.git) :warning: Joint limits have been tweaked
 - [`fanuc_experimental`](https://github.com/InstitutMaupertuis/fanuc_experimental.git) :warning: Joint limits have been tweaked
+- [`universal_robot`](https://github.com/ros-industrial/universal_robot) :warning: Use source code!
 - [`yaml-cpp`](https://launchpad.net/ubuntu/+source/yaml-cpp)
 
 This package has been tested with Ubuntu 14.04 and ROS Indigo.

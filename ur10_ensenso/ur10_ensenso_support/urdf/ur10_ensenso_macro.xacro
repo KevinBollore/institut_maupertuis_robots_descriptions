@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!-- include macros for robot, mounting plate, Ensenso -->
+  <xacro:include filename="$(find ur_description)/urdf/ur10.urdf.xacro"/>
+  <xacro:include filename="$(find excelcar_workcell_description)/urdf/excelcar_workcell_macro.xacro"/>
+  <xacro:include filename="$(find ur10_ensenso_support)/urdf/mounting_plate_macro.xacro"/>
+  <xacro:include filename="$(find ensenso_n10_description)/urdf/ensenso_n10_macro.xacro"/>
+  <!-- create the robot and eef combo itself as a macro -->
+  <xacro:macro name="ur10_ensenso" params="prefix">
+    <!-- instantiate everything -->
+    <xacro:excelcar_workcell prefix="${prefix}"/>
+    <xacro:ur10_robot prefix="${prefix}" joint_limited="true"/>
+    <xacro:mounting_plate prefix="${prefix}"/>
+    <xacro:ensenso_n10 prefix="${prefix}"/>
+    <!-- attach workcell to robot model -->
+    <joint name="${prefix}base_link-workcell_frame" type="fixed">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <parent link="${prefix}base_link"/>
+      <child link="${prefix}excelcar_workcell_frame"/>
+    </joint>
+    <!-- attach mounting plate to the robot tool -->
+    <joint name="${prefix}tool0-mounting_plate_base_link" type="fixed">
+      <origin xyz="0 0 0.0" rpy="0 0 0"/>
+      <parent link="${prefix}tool0"/>
+      <child link="${prefix}mounting_plate_base_link"/>
+    </joint>
+    <!-- attach Ensenso to robot mounting plate -->
+    <joint name="${prefix}tool0-ensenso_n10_frame" type="fixed">
+      <origin xyz="0.1 0 0.03" rpy="0 0 0"/>
+      <parent link="${prefix}tool0"/>
+      <child link="${prefix}ensenso_n10_frame"/>
+    </joint>
+    <link name="${prefix}ensenso_tcp">
+    </link>
+    <joint name="${prefix}tool0-ensenso_tcp_frame" type="fixed">
+      <origin xyz="0.1 0 0.03" rpy="0 0 0"/>
+      <parent link="${prefix}tool0"/>
+      <child link="${prefix}ensenso_tcp"/>
+    </joint>
+  </xacro:macro>
+</robot>
