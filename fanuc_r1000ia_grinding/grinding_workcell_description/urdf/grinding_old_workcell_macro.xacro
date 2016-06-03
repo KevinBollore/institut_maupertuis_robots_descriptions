@@ -3,18 +3,18 @@
   <xacro:macro name="grinding_workcell" params="prefix">
     <link name="${prefix}grinding_workcell_frame">
       <visual>
-        <origin xyz="0 0 -0.52" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://grinding_workcell_description/meshes/visual/grinding_workcell.dae"/>
+          <mesh filename="package://grinding_workcell_description/meshes/visual/grinding_old_workcell.dae"/>
         </geometry>
         <material name="light-grey">
           <color rgba="0.4 0.4 0.4 1"/>
         </material>
       </visual>
       <collision>
-        <origin xyz="0 0 -0.52" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://grinding_workcell_description/meshes/collision/grinding_workcell.stl"/>
+          <mesh filename="package://grinding_workcell_description/meshes/collision/grinding_old_workcell.stl"/>
         </geometry>
       </collision>
     </link>
