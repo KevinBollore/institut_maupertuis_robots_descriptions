@@ -29,5 +29,5 @@ install:
   - git clone https://github.com/ros-industrial/industrial_ci.git .ci_config
 
 script:
-  - source .advanced_ci_config/travis.sh
+  - cd .advanced_ci_config && source ./travis.sh && cd ..
   - source .ci_config/travis.sh
