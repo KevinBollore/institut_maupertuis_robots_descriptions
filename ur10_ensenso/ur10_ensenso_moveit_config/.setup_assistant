@@ -5,4 +5,4 @@ moveit_setup_assistant_config:
   SRDF:
     relative_path: config/ur10_ensenso.srdf
   CONFIG:
-    generated_timestamp: 1464341499
+    generated_timestamp: 1465460291
