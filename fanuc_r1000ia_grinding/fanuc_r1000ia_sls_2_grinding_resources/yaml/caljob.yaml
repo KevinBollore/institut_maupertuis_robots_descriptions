@@ -6,12 +6,12 @@ scenes:
      trigger: ROS_ROBOT_JOINT_VALUES_ACTION_TRIGGER
      trig_action_server: rosRobotSceneTrigger_joint_values
      joint_values:
-        - 0.27438
-        - 0.54669
-        - -0.03522
-        - 1.28528
-        - -1.76496
-        - -0.54365
+        - 0.2749766237
+        - 0.6581636609
+        - 0.1230806189
+        - 1.2852779145
+        - -1.7649642061
+        - -0.5436526087
      observations:
      -
           camera: sls_2
@@ -26,12 +26,12 @@ scenes:
      trigger: ROS_ROBOT_JOINT_VALUES_ACTION_TRIGGER
      trig_action_server: rosRobotSceneTrigger_joint_values
      joint_values:
-        - 0.40497
-        - 0.51939
-        - -0.04383
-        - 1.46065
-        - -1.91576
-        - -0.54901
+        - 0.3663795166
+        - 0.6540446839
+        - 0.0772482727
+        - 1.3905910815
+        - -1.9001748632
+        - -0.6190508324
      observations:
      -
           camera: sls_2
@@ -46,12 +46,12 @@ scenes:
      trigger: ROS_ROBOT_JOINT_VALUES_ACTION_TRIGGER
      trig_action_server: rosRobotSceneTrigger_joint_values
      joint_values:
-        - 0.26674
-        - 0.41829
-        - -0.17533
-        - 1.29968
-        - -1.67079
-        - -0.61933
+        - 0.2282890662
+        - 0.4182856085
+        - -0.1753357767
+        - 1.1692135192
+        - -1.6587434678
+        - -0.7863057346
      observations:
      -
           camera: sls_2
@@ -66,12 +66,12 @@ scenes:
      trigger: ROS_ROBOT_JOINT_VALUES_ACTION_TRIGGER
      trig_action_server: rosRobotSceneTrigger_joint_values
      joint_values:
-        - 0.27491
-        - 0.30231
-        - -0.30266
-        - 0.94138
-        - -2.06026
-        - -0.95086
+        - 0.2609092699
+        - 0.3715456912
+        - -0.1982868563
+        - 0.9353568527
+        - -2.0120853749
+        - -0.9508553765
      observations:
      -
           camera: sls_2
@@ -86,12 +86,12 @@ scenes:
      trigger: ROS_ROBOT_JOINT_VALUES_ACTION_TRIGGER
      trig_action_server: rosRobotSceneTrigger_joint_values
      joint_values:
-        - 0.04786
-        - 0.16993
-        - -0.61908
-        - 0.74808
-        - -1.47835
-        - -1.03552
+        - 0.0644201027
+        - 0.169925256
+        - -0.619085739
+        - 0.6845355859
+        - -1.430175149
+        - -1.139368389
      observations:
      -
           camera: sls_2
@@ -106,12 +106,12 @@ scenes:
      trigger: ROS_ROBOT_JOINT_VALUES_ACTION_TRIGGER
      trig_action_server: rosRobotSceneTrigger_joint_values
      joint_values:
-        - 0.1935
-        - 0.4966
-        - -0.0734
-        - 1.3430
-        - -1.2566
-        - -0.4270
+        - 0.1573065255
+        - 0.6412863271
+        - 0.1171115928
+        - 1.2684005806
+        - -1.1827921808
+        - -0.3832568504
      observations:
      -
           camera: sls_2
@@ -126,12 +126,12 @@ scenes:
      trigger: ROS_ROBOT_JOINT_VALUES_ACTION_TRIGGER
      trig_action_server: rosRobotSceneTrigger_joint_values
      joint_values:
-        - 0.31690
-        - 0.58545
-        - -0.02899
-        - 1.75386
-        - -0.49604
-        - -0.38491
+        - 0.3329215548
+        - 0.5660975429
+        - 0.0783303768
+        - 1.753863912
+        - -0.7248526916
+        - -0.3849149132
      observations:
      -
           camera: sls_2
@@ -146,12 +146,12 @@ scenes:
      trigger: ROS_ROBOT_JOINT_VALUES_ACTION_TRIGGER
      trig_action_server: rosRobotSceneTrigger_joint_values
      joint_values:
-        - 0.42605
-        - 0.15085
-        - -0.55842
-        - 2.41646
-        - -0.87343
-        - -1.02646
+        - 0.4372573375
+        - 0.2341184659
+        - -0.4751484356
+        - 2.4164607093
+        - -0.9778032601
+        - -1.0264630397
      observations:
      -
           camera: sls_2
@@ -166,12 +166,12 @@ scenes:
      trigger: ROS_ROBOT_JOINT_VALUES_ACTION_TRIGGER
      trig_action_server: rosRobotSceneTrigger_joint_values
      joint_values:
-        - 0.31533
-        - 0.22557
-        - -0.4334
-        - 3.10028
-        - -0.47122
-        - -1.61239
+        - 0.3126582822
+        - 0.3686658979
+        - -0.2774026313
+        - 3.1002807102
+        - -0.4712214447
+        - -1.6123875229
      observations:
      -
           camera: sls_2

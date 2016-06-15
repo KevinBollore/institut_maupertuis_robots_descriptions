@@ -27,10 +27,10 @@ static_cameras:
     transform_interface: ros_camera_housing_cti
     camera_housing_frame: sls_2_frame
     camera_mounting_frame: tool0
-    focal_length_x: 3229.9866849080472 # Value copied from SLS-2 calibration file (camera.cal)
-    focal_length_y: 3229.9866849080472 # Value copied from SLS-2 calibration file (camera.cal)
-    center_x: 642.65204815549816 # Value copied from SLS-2 calibration file (camera.cal)
-    center_y: 467.02108473383515 # Value copied from SLS-2 calibration file (camera.cal)
+    focal_length_x: 3232.7050023630745 # Value copied from SLS-2 calibration file (camera.cal)
+    focal_length_y: 3232.7050023630745 # Value copied from SLS-2 calibration file (camera.cal)
+    center_x: 643.56980766472827 # Value copied from SLS-2 calibration file (camera.cal)
+    center_y: 482.95846746138074 # Value copied from SLS-2 calibration file (camera.cal)
     # All of these are set to zero because SLS-2 sends rectified images!
     distortion_k1: 0.0
     distortion_k2: 0.0
